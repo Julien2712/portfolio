@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <meta name="description"
+        content="Contactez Julien Philippe pour discuter d'un projet, d'un stage ou d'une opportunité professionnelle.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in"><span class="gradient-text">Me contacter</span></h1>
+    </header>
+
+    <section id="contact" class="contact-formal-section fade-in-scroll section-fill-center">
+        <div class="contact-formal-container">
+            <!-- Left Side -->
+            <div class="contact-formal-left">
+                <div class="contact-formal-header">
+                    <h1 class="contact-formal-title" style="text-transform: none;">
+                        <span style="color: var(--text-primary);">Me</span><br>
+                        <span class="contact-formal-italic" style="white-space: nowrap; color: var(--accent);">Contacter&nbsp;?</span>
+                    </h1>
+                    
+                    <div class="contact-formal-desc">
+                        <p style="color: var(--text-primary);">ENVIE DE DONNER VIE À VOTRE PROCHAIN<br>PROJET ? LAISSEZ-MOI UN MESSAGE POUR EN<br>DISCUTER.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-formal-infos">
+                    <div class="info-item">
+                        <span class="info-label" style="color: var(--accent);">RÉSEAUX</span>
+                        <a href="https://www.linkedin.com/in/julien-philippe-orl%C3%A9ans/" target="_blank" class="info-value">LINKEDIN</a><br>
+                        <a href="https://github.com/Julien2712/" target="_blank" class="info-value" style="margin-top: 5px; display: inline-block;">GITHUB</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" style="color: var(--accent);">DISPONIBILITÉ</span>
+                        <span class="info-value">OUVERT AUX OPPORTUNITÉS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side (Form) -->
+            <div class="contact-formal-right">
+                <form action="https://formspree.io/f/xeepqvkg" method="POST" class="contact-formal-form">
+                    <div class="form-group-formal">
+                        <label for="name">NOM COMPLET *</label>
+                        <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                    </div>
+                    <div class="form-group-formal">
+                        <label for="_replyto">ADRESSE EMAIL *</label>
+                        <input type="email" id="_replyto" name="_replyto" placeholder="jean.dupont@exemple.fr" required>
+                    </div>
+                    <div class="form-group-formal">
+                        <label for="subject">SUJET</label>
+                        <input type="text" id="subject" name="subject" placeholder="Lancement d'une plateforme web">
+                    </div>
+                    <div class="form-group-formal">
+                        <label for="message">MESSAGE *</label>
+                        <textarea id="message" name="message" placeholder="Bonjour, je souhaite vous parler d'un projet..." rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit-formal">ENVOYER MA DEMANDE &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

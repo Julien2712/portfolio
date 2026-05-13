@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet GSB : Portail Comptes-Rendus – Julien Philippe</title>
+    <meta name="description" content="Développement d'une application web PHP/MVC pour le laboratoire GSB : saisie et suivi des comptes-rendus de visite avec base de données MariaDB.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder" data-type="project"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in">GSB : Portail <span class="gradient-text">Comptes-Rendus</span></h1>
+        <div class="blob blob-2"></div>
+    </header>
+
+    <section class="container">
+
+        <div class="project-details">
+            <h2><i class="fas fa-info-circle"></i> Contexte du projet</h2>
+            <p>Dans le cadre du projet académique de deuxième année de BTS SIO option SLAM, j’ai participé au
+                développement d’une application web pour le laboratoire pharmaceutique fictif <strong>Galaxy Swiss
+                    Bourdin (GSB)</strong>.</p>
+            <p>L’objectif était de concevoir un module web complet permettant la saisie, la gestion et le suivi des
+                comptes-rendus de visite réalisés par les visiteurs médicaux auprès des praticiens.</p>
+        </div>
+
+        <div class="schema-box">
+            <h3>Architecture Technique</h3>
+            <div class="process-flow">
+                <div class="step">
+                    <i class="fas fa-user"></i>
+                    <span>Utilisateur</span>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Web PHP (MVC)</span>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <i class="fas fa-database"></i>
+                    <span>MariaDB</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 60px; text-align: center;">Compétences BTS SIO Mobilisées</h2>
+        <div class="competencies-grid">
+
+            <div class="comp-card">
+                <h4><i class="fas fa-server"></i> Gérer le patrimoine informatique</h4>
+                <ul>
+                    <li>Conception et normalisation de la base de données relationnelle.</li>
+                    <li>Exploitation des normes SQL et modélisation.</li>
+                    <li>Vérification de la cohérence et de l’intégrité des données.</li>
+                    <li>Utilisation de requêtes préparées PDO (Sécurité).</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-bug"></i> Répondre aux incidents</h4>
+                <ul>
+                    <li>Débogage du code PHP et correction des erreurs.</li>
+                    <li>Correction des anomalies d’insertion dans les formulaires.</li>
+                    <li>Amélioration continue selon les retours utilisateurs.</li>
+                    <li>Adaptation du module aux évolutions pédagogiques.</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-globe"></i> Présence en ligne</h4>
+                <ul>
+                    <li>Développement d’un site web dynamique pour le suivi d'activité.</li>
+                    <li>Interface web responsive et ergonomique (Bootstrap 5).</li>
+                    <li>Valorisation des données métier via une application accessible.</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-project-diagram"></i> Travailler en mode projet</h4>
+                <ul>
+                    <li>Analyse des besoins du laboratoire GSB.</li>
+                    <li>Planification et répartition des tâches en équipe.</li>
+                    <li>Tests réguliers et validation progressive.</li>
+                    <li>Travail collaboratif (Git/GitHub).</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-users-cog"></i> Mettre à disposition un service</h4>
+                <ul>
+                    <li>Développement PHP selon architecture <strong>MVC</strong>.</li>
+                    <li>Gestion des rôles (Visiteur, Délégué, Responsable).</li>
+                    <li>Sécurisation (Validation champs, Protection XSS/SQL).</li>
+                    <li>Déploiement local sur serveur Apache (XAMPP).</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-user-graduate"></i> Organiser son développement</h4>
+                <ul>
+                    <li>Veille technologique sur la sécurité web.</li>
+                    <li>Renforcement compétences PHP Objet & MVC.</li>
+                    <li>Approfondissement des bonnes pratiques de sécurité.</li>
+                    <li>Développement de l’autonomie.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <h3>Apports Personnels</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> Maîtrise du développement web PHP / SQL.</li>
+                <li><i class="fas fa-check"></i> Mise en œuvre d'une architecture MVC complète.</li>
+                <li><i class="fas fa-check"></i> Conception d'interface responsive (Bootstrap).</li>
+                <li><i class="fas fa-check"></i> Travail efficace en équipe structurée.</li>
+            </ul>
+        </div>
+
+        <section class="image-gallery-section">
+            <h3>Aperçu des Ressources</h3>
+            <div class="image-gallery-container">
+                <div class="image-gallery">
+                    <div class="gallery-item" data-lightbox="Image/Projet2/bdd.webp">
+                        <img src="Image/Projet2/bdd.webp" alt="Schéma de la base de données MariaDB" />
+                        <p class="caption">Schéma de la base de données MariaDB</p>
+                    </div>
+                    <div class="gallery-item" data-lightbox="Image/Projet2/saisir-rapport-visite.webp">
+                        <img src="Image/Projet2/saisir-rapport-visite.webp" alt="Formulaire de saisie d'un compte-rendu de visite" />
+                        <p class="caption">Formulaire de saisie d'un compte-rendu de visite</p>
+                    </div>
+                    <div class="gallery-item" data-lightbox="Image/Projet2/Liste-mes-rapports.webp">
+                        <img src="Image/Projet2/Liste-mes-rapports.webp" alt="Liste des rapports d'un visiteur" />
+                        <p class="caption">Liste des rapports d'un visiteur</p>
+                    </div>
+                    <div class="gallery-item" data-lightbox="Image/Projet2/historique-par-region.webp">
+                        <img src="Image/Projet2/historique-par-region.webp" alt="Historique des rapports par région" />
+                        <p class="caption">Historique des rapports par région</p>
+                    </div>
+                    <div class="gallery-item" data-lightbox="Image/Projet2/confirmation.webp">
+                        <img src="Image/Projet2/confirmation.webp" alt="Pop-up de confirmation JavaScript" />
+                        <p class="caption">Pop-up de confirmation JavaScript</p>
+                    </div>
+                </div>
+                <!-- Les flèches seront injectées par le JS -->
+            </div>
+        </section>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expérience - Portfolio</title>
+    <meta name="description" content="Parcours professionnel et formations de Julien Philippe : stages en développement web, graphisme, et formation BTS SIO SLAM.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in">Mon Parcours <span class="gradient-text">& Expériences</span></h1>
+    </header>
+
+    <section class="container" style="min-height: 50vh; margin-bottom: 80px;">
+
+        <!-- Expériences -->
+        <h2 class="fade-in-scroll" style="text-align: left; margin-bottom: 40px; display: inline-block;">
+            <i class="fas fa-briefcase"></i> Expériences Professionnelles
+        </h2>
+
+        <div class="timeline" style="max-width: 900px; margin: 0 auto 80px auto;">
+
+            <!-- OnéClim -->
+            <div class="card fade-in-scroll"
+                style="margin-bottom: 30px; display: block; border-left: 4px solid var(--accent);">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Stage - Création de Site
+                    Web</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">OnéClim | 2026 - 6 semaines
+                </h4>
+                <ul style="color: var(--text-secondary); margin-bottom: 20px; padding-left: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Conception et développement d'un site vitrine complet pour un
+                        technicien itinérant.</li>
+                    <li style="margin-bottom: 5px;">Développement front-end avec HTML, CSS et JavaScript (interface
+                        responsive).</li>
+                    <li style="margin-bottom: 5px;">Mise en place d'une base de données SQL pour la gestion des clients
+                        et interventions.</li>
+                    <li style="margin-bottom: 5px;">Déploiement du site en production : <a href="http://oneclim.fr"
+                            target="_blank" style="color: var(--accent); text-decoration: underline;">oneclim.fr</a>
+                    </li>
+                </ul>
+                <div class="skills">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+
+            <!-- Orcom -->
+            <div class="card fade-in-scroll" style="margin-bottom: 30px; display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Stage - Développement
+                    d'Applications</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">Orcom - Orléans | 2025 - 6
+                    semaines</h4>
+                <ul style="color: var(--text-secondary); padding-left: 20px; margin-bottom: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Développement d'un système de synchronisation automatique en C# pour
+                        l'intégration de données.</li>
+                    <li style="margin-bottom: 5px;">Mise en place de solutions logicielles pour l'automatisation des
+                        processus.</li>
+                </ul>
+                <div class="skills">
+                    <span>SQL</span>
+                    <span>C#</span>
+                </div>
+            </div>
+
+            <!-- Job Etudiant -->
+            <div class="card fade-in-scroll" style="margin-bottom: 30px; display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Job Étudiant - Agricole
+                </h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">USCP Engenville | 2024/2025 -
+                    7 semaines</h4>
+                <ul style="color: var(--text-secondary); padding-left: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Analyse du grain et contrôle qualité.</li>
+                    <li style="margin-bottom: 5px;">Nettoyage des cellules et entretien des différents étages des silos.
+                    </li>
+                    <li style="margin-bottom: 5px;">Maintenance et gestion des infrastructures agricoles.</li>
+                </ul>
+            </div>
+
+            <!-- CITAS -->
+            <div class="card fade-in-scroll" style="margin-bottom: 30px; display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Stage - Graphisme</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">CITAS - Dublin, Irlande | 2024
+                    - 4 semaines</h4>
+                <ul style="color: var(--text-secondary); padding-left: 20px; margin-bottom: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Recherche graphique et création graphique.</li>
+                    <li style="margin-bottom: 5px;">Mise en place de roughs et maquettes.</li>
+                    <li style="margin-bottom: 5px;">Modification de fichiers graphiques.</li>
+                    <li style="margin-bottom: 5px;">Expérience internationale en Irlande.</li>
+                </ul>
+                <div class="skills">
+                    <span>Illustrator</span>
+                    <span>Indesign</span>
+                    <span>Photoshop</span>
+                </div>
+            </div>
+
+            <!-- Artnéo -->
+            <div class="card fade-in-scroll" style="margin-bottom: 30px; display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Stage - Graphisme</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">Artnéo - Malesherbes | 2023 -
+                    8 semaines</h4>
+                <ul style="color: var(--text-secondary); padding-left: 20px; margin-bottom: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Recherche graphique et création de concepts visuels.</li>
+                    <li style="margin-bottom: 5px;">Mise en place de roughs et développement créatif.</li>
+                    <li style="margin-bottom: 5px;">Modification et optimisation de fichiers graphiques.</li>
+                </ul>
+                <div class="skills">
+                    <span>Illustrator</span>
+                    <span>Indesign</span>
+                    <span>Photoshop</span>
+                </div>
+            </div>
+
+            <!-- IDB -->
+            <div class="card fade-in-scroll" style="margin-bottom: 30px; display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Stage - Graphisme</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">IDB - Ingré | 2023 - 4
+                    semaines</h4>
+                <ul style="color: var(--text-secondary); padding-left: 20px; margin-bottom: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Recherche graphique et analyse de tendances visuelles.</li>
+                    <li style="margin-bottom: 5px;">Création graphique et développement de concepts.</li>
+                    <li style="margin-bottom: 5px;">Mise en place de roughs et prototypes visuels.</li>
+                </ul>
+                <div class="skills">
+                    <span>Illustrator</span>
+                    <span>Indesign</span>
+                    <span>Photoshop</span>
+                </div>
+            </div>
+
+            <!-- Théoborat -->
+            <div class="card fade-in-scroll" style="margin-bottom: 30px; display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Stage - Production
+                    Graphique & Finition</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">Théoborat - Pithiviers | 2022
+                    - 3 semaines</h4>
+                <ul style="color: var(--text-secondary); padding-left: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 5px;">Collage de supports sur plaque.</li>
+                    <li style="margin-bottom: 5px;">Échenillage et travaux de finition.</li>
+                    <li style="margin-bottom: 5px;">Travail graphique manuel et préparation d'impression.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Formation -->
+        <h2 class="fade-in-scroll" style="text-align: left; margin-bottom: 40px; display: inline-block;">
+            <i class="fas fa-graduation-cap"></i> Formations
+        </h2>
+
+        <div class="timeline" style="max-width: 900px; margin: 0 auto;">
+
+            <div class="card fade-in-scroll"
+                style="margin-bottom: 30px; display: block; border-left: 4px solid var(--accent);">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">BTS SIO (Option SLAM)
+                </h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">2024 - 2026</h4>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métier.
+                </p>
+            </div>
+
+            <div class="card fade-in-scroll" style="display: block;">
+                <h3 style="color: var(--text-primary); margin-bottom: 5px; font-size: 1.4rem;">Bac Pro RPIP (Option
+                    Graphisme)</h3>
+                <h4 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">2024 | Mention Bien</h4>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Réalisation de Produits Imprimés et Plurimédia - Montereau-Fault-Yonne.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

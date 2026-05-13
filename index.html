@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julien Philippe — Développeur Web BTS SIO SLAM</title>
+    <meta name="description"
+        content="Portfolio de Julien Philippe, étudiant en BTS SIO option SLAM. Développeur passionné spécialisé en PHP, JavaScript, SQL et conception d'applications web.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Julien Philippe",
+      "jobTitle": "Développeur Web",
+      "url": "https://julienphilippe.fr",
+      "knowsAbout": ["PHP", "JavaScript", "SQL", "Développement Web", "C#", "Python"]
+    }
+    </script>
+</head>
+
+<body>
+
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div id="navbar-placeholder"></div>
+
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <span class="badge">Étudiant BTS SIO / SLAM</span>
+            <h1 class="fade-in"><span class="gradient-text">Julien</span> <span class="name-last">Philippe</span></h1>
+            <p class="fade-in">Développeur passionné en formation. Je conçois des solutions logicielles modernes et
+                efficaces.</p>
+            <div class="hero-btns fade-in">
+                <a href="projets" class="btn-primary" aria-label="Voir mes projets">Voir mes projets <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+            <a href="#about" class="scroll-indicator fade-in" aria-label="Défiler vers la section à propos">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about container fade-in-scroll">
+        <h2>À Propos</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Actuellement en deuxième année de <strong>BTS SIO option SLAM</strong> (Solutions Logicielles et
+                    Applications Métier), je me spécialise dans le développement d'applications web et lourdes.</p>
+                <p>Mon objectif est de mettre en avant mon savoir-faire et mon évolution, tout en partageant ma passion
+                    pour l’informatique.</p>
+
+                <div class="skills">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                    <span>SQL</span>
+                    <span>Python</span>
+                    <span>Android Studio</span>
+                    <span>Java</span>
+
+                </div>
+                <a href="experience" class="link" style="margin-top: 20px; display:inline-block;">Voir mon parcours
+                    complet <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-cards">
+                <div class="card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Développement</h4>
+                    <p>Création de sites et logiciels sur mesure.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h4>Base de données</h4>
+                    <p>Gestion et modélisation de données.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects container fade-in-scroll">
+        <h2>Quelques Réalisations</h2>
+
+        <div class="project-filters fade-in-scroll">
+            <button class="filter-btn active" data-filter="all" aria-label="Afficher tous les projets">Tous</button>
+            <button class="filter-btn" data-filter="web" aria-label="Afficher les projets Web">Web</button>
+            <button class="filter-btn" data-filter="logiciel"
+                aria-label="Afficher les projets Logiciel">Logiciel</button>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card" data-category="web">
+                <div class="project-info">
+                    <h3>GSB : Portail Comptes-Rendus</h3>
+                    <div class="project-details-overlay">
+                        <p>Développement d'une application web complète pour le laboratoire Galaxy Swiss Bourdin. Le
+                            module permet la saisie, la gestion et le suivi centralisé des comptes-rendus de visite.</p>
+                        <div class="tags">
+                            <span>PHP</span>
+                            <span>MVC</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <a href="projet-gsb" class="link" aria-label="Voir plus de détails sur le projet GSB">Voir plus de
+                        détails</a>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="logiciel">
+                <div class="project-info">
+                    <h3>Intégration de Données API</h3>
+                    <div class="project-details-overlay">
+                        <p>Développement d'un automate en C# durant mon stage. L'application récupère des données via
+                            une API externe et alimente automatiquement une base de données SQL Server.</p>
+                        <div class="tags">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                    <a href="projet-api" class="link" aria-label="Voir plus de détails sur le projet API">Voir plus de
+                        détails</a>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+                <div class="project-info">
+                    <h3>Recharge Clim : Site Web & BDD</h3>
+                    <div class="project-details-overlay">
+                        <p>Conception d'un site vitrine et d'une base de données métier pour un technicien spécialisé
+                            dans la maintenance de climatisations automobiles.</p>
+                        <div class="tags">
+                            <span>HTML/CSS</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <a href="projet-clim" class="link"
+                        aria-label="Voir plus de détails sur le projet Recharge Clim">Voir plus de détails</a>
+                </div>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 60px;">
+            <a href="projets" class="btn-secondary">Voir tous les projets</a>
+        </div>
+    </section>
+
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

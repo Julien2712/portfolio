@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSBPARAM - Portfolio</title>
+    <meta name="description" content="Module de paramétrage GSBPARAM pour le laboratoire Galaxy Swiss Bourdin, développé dans le cadre du BTS SIO SLAM.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder" data-type="project"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in"><span class="gradient-text">GSBPARAM</span></h1>
+        <div class="blob blob-2"></div>
+    </header>
+
+    <section class="container">
+
+        <div class="project-details">
+            <h2><i class="fas fa-info-circle"></i> Contexte du projet</h2>
+            <p>Description du projet GSBPARAM à remplir ultérieurement.</p>
+        </div>
+
+        <div class="schema-box">
+            <h3>Architecture Technique</h3>
+            <div class="process-flow">
+                <div class="step">
+                    <i class="fas fa-user"></i>
+                    <span>Utilisateur</span>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <i class="fas fa-code"></i>
+                    <span>Tech à remplir</span>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <i class="fas fa-database"></i>
+                    <span>Base de données</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 60px; text-align: center;">Compétences BTS SIO Mobilisées</h2>
+        <div class="competencies-grid">
+
+            <div class="comp-card">
+                <h4><i class="fas fa-tools"></i> Compétence à remplir</h4>
+                <ul>
+                    <li>Détail 1...</li>
+                    <li>Détail 2...</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="project-footer-grid">
+            <div class="conclusion">
+                <h3>Apports Personnels</h3>
+                <p style="text-align: center; color: var(--text-secondary);">En cours de rédaction...</p>
+            </div>
+        </div>
+
+        <section class="image-gallery-section">
+            <h3>Ressources</h3>
+            <p style="text-align: center; color: var(--text-secondary);">Aucune ressource disponible pour le moment.</p>
+        </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

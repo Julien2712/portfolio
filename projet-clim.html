@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Stage – Recharge Climatisation Auto | Julien Philippe</title>
+    <meta name="description"
+        content="Projet de stage : développement d'un site vitrine et d'une base de données pour un technicien itinérant spécialisé en recharge de climatisation automobile.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder" data-type="project"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in">Site Web & BDD : <span class="gradient-text">Recharge Clim Auto</span></h1>
+        <div class="blob blob-1"></div>
+    </header>
+
+    <section class="container">
+
+        <!-- Contexte -->
+        <div class="project-details">
+            <h2><i class="fas fa-info-circle"></i> Contexte du projet</h2>
+            <p>Dans le cadre de mon stage de BTS SIO, j'ai développé une solution numérique complète pour un
+                <strong>technicien indépendant itinérant</strong> spécialisé dans la <strong>recharge de climatisations
+                    automobiles à domicile</strong>.
+            </p>
+            <p>Il se déplace directement chez ses clients pour effectuer les interventions. L'objectif était de
+                lui fournir un <strong>site vitrine</strong> présentant ses services ainsi qu'une <strong>base de
+                    données</strong> pour gérer ses clients, ses interventions et son historique.</p>
+        </div>
+
+        <!-- Architecture technique -->
+        <div class="schema-box">
+            <h3>Architecture Technique</h3>
+            <div class="process-flow">
+                <div class="step">
+                    <i class="fas fa-user"></i>
+                    <span>Visiteur / Client</span>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <i class="fas fa-globe"></i>
+                    <span>Site Web HTML/CSS/PHP</span>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <i class="fas fa-database"></i>
+                    <span>Base de données MySQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences BTS SIO -->
+        <h2 style="margin-top: 60px; text-align: center;">Compétences BTS SIO Mobilisées</h2>
+        <div class="competencies-grid">
+
+            <div class="comp-card">
+                <h4><i class="fas fa-server"></i> Gérer le patrimoine informatique</h4>
+                <ul>
+                    <li>Conception et modélisation de la base de données MySQL.</li>
+                    <li>Création des tables (clients, interventions, véhicules).</li>
+                    <li>Exploitation des normes SQL et intégrité référentielle.</li>
+                    <li>Utilisation de requêtes préparées PDO pour sécuriser les accès.</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-globe"></i> Présence en ligne</h4>
+                <ul>
+                    <li>Développement d'un site vitrine moderne et responsive.</li>
+                    <li>Mise en valeur des services proposés par le technicien.</li>
+                    <li>Formulaire de contact fonctionnel pour la prise de rendez-vous.</li>
+                    <li>Optimisation de l'ergonomie pour une utilisation sur mobile.</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-users-cog"></i> Mettre à disposition un service</h4>
+                <ul>
+                    <li>Développement d'une interface d'administration pour le technicien.</li>
+                    <li>Gestion des fiches clients et historique des interventions.</li>
+                    <li>Affichage des données depuis la base de données en temps réel.</li>
+                    <li>Déploiement sur environnement local (XAMPP / Apache).</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-bug"></i> Répondre aux incidents</h4>
+                <ul>
+                    <li>Correction des anomalies de formulaires et d'insertion en BDD.</li>
+                    <li>Débogage PHP et adaptation aux retours du client-stagiaire.</li>
+                    <li>Tests de validité des données saisies (contrôle des champs).</li>
+                    <li>Vérification de la cohérence des données enregistrées.</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-project-diagram"></i> Travailler en mode projet</h4>
+                <ul>
+                    <li>Analyse des besoins du client avant développement.</li>
+                    <li>Rédaction d'un cahier des charges simplifié.</li>
+                    <li>Planification des étapes (site, BDD, interface admin).</li>
+                    <li>Présentation et validation des livrables au client.</li>
+                </ul>
+            </div>
+
+            <div class="comp-card">
+                <h4><i class="fas fa-user-graduate"></i> Organiser son développement</h4>
+                <ul>
+                    <li>Veille sur les bonnes pratiques de sécurité web (XSS, injections SQL).</li>
+                    <li>Autonomie dans la gestion des tâches sans supervision permanente.</li>
+                    <li>Renforcement des compétences HTML/CSS, PHP et MySQL.</li>
+                    <li>Adaptation rapide aux exigences d'un contexte professionnel réel.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Apports & Ressources -->
+        <div class="project-footer-grid">
+            <div class="conclusion">
+                <h3>Apports Personnels</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Première expérience de développement pour un vrai client.</li>
+                    <li><i class="fas fa-check"></i> Conception complète d'une BDD métier (clients, véhicules, interventions).</li>
+                    <li><i class="fas fa-check"></i> Création d'un site vitrine responsive en conditions réelles.</li>
+                    <li><i class="fas fa-check"></i> Gestion de projet en autonomie sur toute la durée du stage.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="image-gallery-section">
+            <h3>Lien du Projet</h3>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://oneclim.fr" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; text-decoration: none; border-radius: 50px;">
+                    <i class="fas fa-external-link-alt"></i> Visiter le site : oneclim.fr
+                </a>
+            </div>
+        </section>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

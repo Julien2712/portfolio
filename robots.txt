@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://julien-philippe.fr/Portfolio/sitemap.xml

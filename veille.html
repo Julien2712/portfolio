@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique – Julien Philippe</title>
+    <meta name="description"
+        content="Ma veille technologique sur le développement web, la cybersécurité et l'intelligence artificielle.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in">Ma Veille <span class="gradient-text">Technologique</span></h1>
+        <div class="blob blob-1"></div>
+    </header>
+
+    <section class="container section-fill-center">
+
+        <div class="news-grid">
+
+            <!-- =============================================
+                 ARTICLE 1 — Écoconception web
+                 ============================================= -->
+            <a href="https://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2744025674"
+                target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fas fa-leaf"></i> Écoconception Web</span>
+                    <h3>Écoconception web : les 115 bonnes pratiques</h3>
+                    <p>Un guide de référence qui recense 115 bonnes pratiques pour réduire l'impact environnemental des
+                        sites web, couvrant la conception, le code client/serveur, l'hébergement et la gestion des
+                        contenus.</p>
+                    <span class="news-source"><i class="fas fa-book"></i> Developpez.com — Frédéric Bordage, Eyrolles
+                        (2023) — Lu en Septembre</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 2 — Oh my code JavaScript
+                 ============================================= -->
+            <a href="https://javascript.developpez.com/livres/index/?page=JavaScript#L2212674082" target="_blank"
+                rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fab fa-js"></i> JavaScript</span>
+                    <h3>Oh my code, je parle le JavaScript !</h3>
+                    <p>Un livre pratique orienté projets concrets (menu burger, dark mode, API, ToDoList…) pour
+                        apprendre JavaScript étape par étape, de l'initialisation au TypeScript avancé.</p>
+                    <span class="news-source"><i class="fas fa-book"></i> Developpez.com — Eyrolles, 1re édition (2022)
+                        — Lu en Octobre</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 3 — Vidéo YouTube : Rust
+                 ============================================= -->
+            <a href="https://youtu.be/hbHgIzIbzmQ" target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fab fa-youtube"></i> Vidéo</span>
+                    <h3>Pourquoi les devs réécrivent tout avec Rust ?</h3>
+                    <p>Pourquoi les géants de la tech comme Microsoft, Google ou Amazon abandonnent progressivement
+                        C/C++ au profit de Rust ? Une vidéo qui explique les avantages de ce langage en termes de
+                        sécurité mémoire et de performance.</p>
+                    <span class="news-source"><i class="fab fa-youtube"></i> YouTube — 2026 — Lu en Novembre</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 4 — Claude & Claude Code, mars 2026
+                 ============================================= -->
+            <a href="https://www.bravrez.fr/article/intelligence-artificielle/article-claude-et-claude-code-en-mars-2026---voice--remote-control--auto-mode--computer-use--dispatch---btw---loop-et-anthropic-academy-31.html"
+                target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fas fa-robot"></i> Intelligence Artificielle</span>
+                    <h3>Claude & Claude Code en mars 2026</h3>
+                    <p>Claude Code, l'assistant IA agentique d'Anthropic, franchit un nouveau cap : mode vocal,
+                        contrôle à distance, pilotage de Mac, tâches planifiées et Anthropic Academy. Un tour
+                        complet des nouveautés qui redéfinissent l'IA dans le développement.</p>
+                    <span class="news-source"><i class="fas fa-globe"></i> Bravrez.fr — Mars 2026 — Lu en
+                        Décembre</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 5 — Langage SQL
+                 ============================================= -->
+            <a href="https://www.data-bird.co/blog/langage-sql" target="_blank" rel="noopener noreferrer"
+                class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fas fa-database"></i> SQL / Data</span>
+                    <h3>Langage SQL : Qu'est-ce que c'est ?</h3>
+                    <p>Une introduction complète au langage SQL (Structured Query Language), pilier de la gestion de
+                        données. Découvrez son fonctionnement, ses principales commandes et pourquoi il reste
+                        indispensable pour tout développeur ou analyste de données.</p>
+                    <span class="news-source"><i class="fas fa-globe"></i> DataBird — 2025 — Lu en Janvier</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 6 — JavaScript Modules
+                 ============================================= -->
+            <a href="https://www.alsacreations.com/article/lire/565-JavaScript-organiser-son-code-en-modules.html"
+                target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fab fa-js"></i> JavaScript</span>
+                    <h3>JavaScript : organiser son code en modules</h3>
+                    <p>Un guide pour comprendre l'intérêt d'isoler son code dans des modules "hermétiques". Découvrez
+                        les techniques pour éviter les conflits globaux et structurer vos scripts de manière propre et
+                        maintenable.</p>
+                    <span class="news-source"><i class="fas fa-globe"></i> Alsacreations — 2012 — Lu en Février</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 7 — Claude 3 Family (Anthropic)
+                 ============================================= -->
+            <a href="https://www.anthropic.com/news/claude-3-family" target="_blank" rel="noopener noreferrer"
+                class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fas fa-robot"></i> Intelligence Artificielle</span>
+                    <h3>La famille Claude 3 : Haiku, Sonnet et Opus</h3>
+                    <p>Anthropic présente la famille de modèles Claude 3, établissant de nouveaux standards sur un large
+                        éventail de tâches cognitives. Trois modèles aux capacités croissantes : Claude 3 Haiku
+                        (rapidité), Sonnet (équilibre) et Opus (performance maximale).</p>
+                    <span class="news-source"><i class="fas fa-globe"></i> Anthropic — 2024 — Lu en Mars</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 8 — Mistral Medium 3.5
+                 ============================================= -->
+            <a href="https://intelligence-artificielle.developpez.com/actu/382762/Le-modele-d-IA-francais-Mistral-Medium-3-5-qui-surpasse-Claude-Sonnet-4-5-est-desormais-disponible-en-tant-que-modele-ouvert-et-Mistral-Vibe-prend-desormais-en-charge-le-cloud-computing/"
+                target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fas fa-robot"></i> Intelligence Artificielle</span>
+                    <h3>Mistral Medium 3.5 en open source</h3>
+                    <p>Le modèle d'IA français Mistral Medium 3.5, surpassant Claude Sonnet 4.5, est désormais
+                        disponible en modèle ouvert. Mistral Vibe prend également en charge le cloud computing.</p>
+                    <span class="news-source"><i class="fas fa-globe"></i> Developpez.com — 2026 — Lu en Avril</span>
+                </article>
+            </a>
+
+            <!-- =============================================
+                 ARTICLE 9 — WebDevArena Anthropic
+                 ============================================= -->
+            <a href="https://www.blogdumoderateur.com/intelligence-artificielle-meilleurs-modeles-web-mai-2026/"
+                target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card fade-in-scroll">
+                    <span class="news-category"><i class="fas fa-robot"></i> Intelligence Artificielle</span>
+                    <h3>Les meilleurs modèles web en mai 2026</h3>
+                    <p>La WebDevArena consacre l'omniprésence d'Anthropic avec son modèle Claude qui domine les benchmarks de développement web.</p>
+                    <span class="news-source"><i class="fas fa-globe"></i> BDM — 2026 — Lu en Mai</span>
+                </article>
+            </a>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+
+</body>
+
+</html>

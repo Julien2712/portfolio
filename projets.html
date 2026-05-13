@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mes Réalisations</title>
+    <meta name="description" content="Découvrez les projets réalisés par Julien Philippe : applications web PHP/MVC, intégration API, sites vitrines et bases de données.">
+    <link rel="icon" type="image/png" href="Image/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialisation immédiate du thème pour éviter le flash blanc
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <header class="page-header">
+        <h1 class="fade-in">Mes <span class="gradient-text">Réalisations</span></h1>
+        <div class="blob blob-2"></div>
+    </header>
+
+    <section class="container section-fill-center">
+        <div class="projects-grid">
+
+            <article class="project-card fade-in-scroll" data-href="projet-gsb">
+                <div class="project-info">
+                    <h3>GSB : Portail Comptes-Rendus</h3>
+                    <div class="project-details-overlay">
+                        <p>Développement d'une application web complète pour le laboratoire Galaxy Swiss Bourdin. Le module
+                            permet la saisie, la gestion et le suivi centralisé des comptes-rendus de visite des visiteurs
+                            médicaux.</p>
+                        <div class="tags">
+                            <span>PHP</span>
+                            <span>MVC</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <span class="link">En savoir plus <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card fade-in-scroll" data-href="projet-api">
+                <div class="project-info">
+                    <h3>Intégration de Données API</h3>
+                    <div class="project-details-overlay">
+                        <p>Développement d'un automate en C# durant mon stage. L'application récupère des données via une
+                            API externe et alimente automatiquement une base de données SQL Server pour analyse.</p>
+                        <div class="tags">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <span class="link">En savoir plus <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card fade-in-scroll" data-href="projet-clim">
+                <div class="project-info">
+                    <h3>Site Web &amp; BDD : Recharge Climatisation</h3>
+                    <div class="project-details-overlay">
+                        <p>Développement d'un site vitrine et d'une base de données pour un technicien itinérant spécialisé
+                            dans la recharge de climatisations automobiles à domicile.</p>
+                        <div class="tags">
+                            <span>HTML/CSS</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <span class="link">En savoir plus <i class="fas fa-arrow-right"></i></span>
+                        <a href="https://oneclim.fr" target="_blank" class="link" onclick="event.stopPropagation()">
+                            <i class="fas fa-external-link-alt"></i> Voir le site
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card fade-in-scroll" data-href="projet-gsbparam">
+                <div class="project-info">
+                    <h3>GSBPARAM</h3>
+                    <div class="project-details-overlay">
+                        <p>Développement d'un module de paramétrage pour le laboratoire GSB. Plus de détails à venir.</p>
+                        <div class="tags">
+                            <span>BTS SIO</span>
+                            <span>Développement</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <span class="link">En savoir plus <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
