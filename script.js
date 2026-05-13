@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 obs.unobserve(entry.target);
-                
+
                 // Retirer la classe d'animation une fois terminée pour ne pas bloquer les hovers
                 setTimeout(() => {
                     entry.target.classList.remove('fade-in-scroll');
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const icon = themeToggle.querySelector('i');
             // Animation de rotation
             icon.style.transform = 'scale(0.8) rotate(180deg)';
-            
+
             setTimeout(() => {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -124,12 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. --- Parallax Progress ---
     function initParallax(lenis) {
         const parallaxElements = document.querySelectorAll('.project-card, .timeline-content, .hero-content');
-        
+
         lenis.on('scroll', () => {
             parallaxElements.forEach(el => {
                 const rect = el.getBoundingClientRect();
                 const speed = el.classList.contains('hero-content') ? 0.2 : 0.08;
-                
+
                 // Si l'élément est dans le viewport (ou proche)
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     const shift = (rect.top - window.innerHeight / 2) * speed;
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Sub-functions ---
     function initLightbox() {
         if (document.querySelector('.lightbox-v2')) return;
-        
+
         // Injection directe du CSS pour les flèches (anti-cache)
         const style = document.createElement('style');
         style.textContent = `
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const progressBar = document.createElement('div');
         progressBar.id = 'reading-progress';
         document.body.appendChild(progressBar);
-        
+
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Start fade out
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.95)';
-                    
+
                     setTimeout(() => {
                         if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
                             card.style.display = 'flex';
@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }, 300); // Wait for transition out
                 });
-                
+
                 // Refresh Scroll Observer
                 setTimeout(() => {
                     if (window.scrollObserver) {
@@ -500,7 +500,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Init theme on load
-(function() {
+(function () {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
 })();
@@ -521,14 +521,14 @@ class Star {
     }
     update(mouse) {
         this.y -= this.velocity;
-        
+
         // Mouse dodge logic
         if (mouse && mouse.x !== null) {
             const dx = this.x - mouse.x;
             const dy = this.y - mouse.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             const dodgeRadius = 120; // Radius of the invisible circle
-            
+
             if (distance < dodgeRadius) {
                 const force = (dodgeRadius - distance) / dodgeRadius;
                 const angle = Math.atan2(dy, dx);
