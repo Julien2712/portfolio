@@ -121,11 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateThemeIcon();
 
-    // 5. --- Parallax Progress ---
-    function initParallax(lenis) {
+    // 5. --- Parallax Progress (native scroll) ---
+    function initParallax() {
         const parallaxElements = document.querySelectorAll('.project-card, .timeline-content, .hero-content');
+        if (parallaxElements.length === 0) return;
 
-        lenis.on('scroll', () => {
+        window.addEventListener('scroll', () => {
             parallaxElements.forEach(el => {
                 const rect = el.getBoundingClientRect();
                 const speed = el.classList.contains('hero-content') ? 0.2 : 0.08;
@@ -136,8 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.style.transform = `translateY(${shift}px)`;
                 }
             });
-        });
+        }, { passive: true });
     }
+    initParallax();
 
     // 6. --- Bouton Remonter (Scroll to Top) ---
     const scrollTopBtn = document.createElement('button');
@@ -156,72 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     scrollTopBtn.addEventListener('click', () => {
-        if (window.lenisInstance) {
-            window.lenisInstance.scrollTo(0, { duration: 1.5 });
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 6. --- Smooth Scroll Global (Lenis) ---
-    const lenisScript = document.createElement('script');
-    lenisScript.src = "https://unpkg.com/lenis@1.1.18/dist/lenis.min.js";
-
-    // Fallback : si Lenis ne charge pas en 3s, on continue sans
-    const lenisFallbackTimeout = setTimeout(() => {
-        console.warn('Lenis failed to load, using native scroll');
-    }, 3000);
-
-    lenisScript.onerror = () => {
-        clearTimeout(lenisFallbackTimeout);
-        console.warn('Lenis script failed to load, using native scroll');
-    };
-
-    lenisScript.onload = () => {
-        clearTimeout(lenisFallbackTimeout);
-        try {
-            const lenis = new Lenis({
-                duration: 1.2,
-                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                orientation: 'vertical',
-                gestureOrientation: 'vertical',
-                smoothWheel: true,
-                wheelMultiplier: 1,
-                smoothTouch: false,
-                touchMultiplier: 2,
-                infinite: false,
-                autoResize: true,
-                prevent: (node) => node.classList.contains('no-lenis'),
-            });
-            window.lenisInstance = lenis;
-            initParallax(lenis);
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
-
-            // Fallback: si le scroll natif est complètement bloqué après 2s,
-            // détruire Lenis et revenir au scroll natif
-            setTimeout(() => {
-                const testScroll = () => {
-                    const scrollable = document.documentElement.scrollHeight > window.innerHeight;
-                    if (scrollable && !lenis.isScrolling && window.scrollY === 0) {
-                        // Possible stuck scroll - add wheel passthrough
-                        window.addEventListener('wheel', (e) => {
-                            if (!lenis.isScrolling) {
-                                window.scrollBy(0, e.deltaY);
-                            }
-                        }, { passive: true });
-                    }
-                };
-                testScroll();
-            }, 2000);
-        } catch (e) {
-            console.error('Lenis init failed:', e);
-        }
-    };
-    document.head.appendChild(lenisScript);
+    // (Lenis removed — native scroll used for maximum compatibility)
 
     // --- Timeline Line Scroll Animation ---
     const timeline = document.querySelector('.timeline');
@@ -332,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     showImage(currentIndex);
                     modal.classList.add('active');
-                    if (window.lenisInstance) window.lenisInstance.stop();
+                    document.body.style.overflow = 'hidden';
                 };
             });
         };
@@ -343,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function closeModal() {
             modal.classList.remove('active');
-            if (window.lenisInstance) window.lenisInstance.start();
+            document.body.style.overflow = '';
         }
         closeBtn.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
@@ -493,8 +433,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             e.preventDefault();
-            if (window.lenisInstance) window.lenisInstance.scrollTo(targetElement);
-            else targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
