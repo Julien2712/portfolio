@@ -205,7 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .lightbox-v2 .lightbox-next { right:30px; }
             .lightbox-v2 .lightbox-close { position:absolute; top:30px; right:30px; font-size:30px; color:white; background:none; border:none; cursor:pointer; z-index:10011; }
             .lightbox-v2 .lightbox-caption { color:white; margin-top:20px; padding:10px 20px; background:rgba(255,255,255,0.1); border-radius:30px; backdrop-filter:blur(10px); }
-            @media (max-width: 768px) { .lightbox-v2 .lightbox-nav { width:45px; height:45px; font-size:1.2rem; } .lightbox-v2 .lightbox-prev { left:10px; } .lightbox-v2 .lightbox-next { right:10px; } }
+            .lightbox-v2 .lightbox-counter { position:absolute; top:30px; left:30px; font-size:1.2rem; color:rgba(255,255,255,0.8); background:rgba(0,0,0,0.5); padding:8px 16px; border-radius:20px; font-weight:600; border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(5px); z-index:10011; }
+            @media (max-width: 768px) { .lightbox-v2 .lightbox-nav { width:45px; height:45px; font-size:1.2rem; } .lightbox-v2 .lightbox-prev { left:10px; } .lightbox-v2 .lightbox-next { right:10px; } .lightbox-v2 .lightbox-counter { top:20px; left:20px; font-size:1rem; padding:6px 12px; } .lightbox-v2 .lightbox-close { top:20px; right:20px; font-size:24px; } }
         `;
         document.head.appendChild(style);
 
@@ -213,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.className = 'lightbox-v2';
         modal.innerHTML = `
             <button class="lightbox-close"><i class="fas fa-times"></i></button>
+            <div class="lightbox-counter"></div>
             <button class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></button>
             <div class="lightbox-content">
                 <div class="lightbox-image-wrapper">
@@ -229,6 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextBtn = modal.querySelector('.lightbox-next');
 
         const captionEl = modal.querySelector('.lightbox-caption');
+        const counterEl = modal.querySelector('.lightbox-counter');
         let currentItems = [];
         let currentIndex = 0;
 
@@ -239,6 +242,8 @@ document.addEventListener('DOMContentLoaded', () => {
             modalImg.src = item.url;
             captionEl.textContent = item.caption || '';
             captionEl.style.display = item.caption ? 'block' : 'none';
+            counterEl.textContent = (currentIndex + 1) + ' / ' + currentItems.length;
+            counterEl.style.display = currentItems.length > 1 ? 'block' : 'none';
         }
 
         const bindLightboxEvents = () => {
