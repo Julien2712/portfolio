@@ -312,16 +312,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 const nextBtn = document.createElement('button');
                 nextBtn.className = 'carousel-btn next';
                 nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                
+                const counter = document.createElement('div');
+                counter.className = 'carousel-counter';
+                
                 container.appendChild(prevBtn);
                 container.appendChild(nextBtn);
+                container.appendChild(counter);
 
                 const updateArrows = () => {
                     const x = wrapper.scrollLeft;
-                    const max = wrapper.scrollWidth - wrapper.clientWidth;
+                    const w = wrapper.clientWidth;
+                    const max = wrapper.scrollWidth - w;
+                    
                     prevBtn.style.opacity = x > 10 ? "1" : "0";
                     prevBtn.style.visibility = x > 10 ? "visible" : "hidden";
                     nextBtn.style.opacity = x < max - 10 ? "1" : "0";
                     nextBtn.style.visibility = x < max - 10 ? "visible" : "hidden";
+
+                    let currentIndex = Math.round(x / w);
+                    if (currentIndex < 0) currentIndex = 0;
+                    if (currentIndex >= items.length) currentIndex = items.length - 1;
+                    counter.textContent = (currentIndex + 1) + ' / ' + items.length;
                 };
                 wrapper.addEventListener('scroll', updateArrows);
                 setTimeout(updateArrows, 150);
