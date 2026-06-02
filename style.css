@@ -1791,6 +1791,108 @@ section:first-of-type,
     transition: transform 0.3s ease;
 }
 
+/* --- Technologies utilisées --- */
+.tech-stack-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.tech-stack-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.tech-badge:hover {
+    border-color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tech-badge i {
+    color: var(--accent);
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+[data-theme="light"] .tech-badge {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- Besoins du projet --- */
+.project-needs {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    padding: 35px 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 40px 0;
+}
+
+.project-needs h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-needs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.project-needs li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-needs li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+[data-theme="light"] .project-needs {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
 /* Ajustements light mode */
 [data-theme="light"] .navbar {
     background: rgba(255, 255, 255, 0.9);
