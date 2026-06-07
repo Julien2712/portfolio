@@ -28,7 +28,8 @@
         { href: 'experience', label: 'Expérience' },
         { href: 'certifications', label: 'Certifications' },
         { href: 'veille', label: 'Veille' },
-        { href: 'Image/Tableur certification.pdf', label: 'E5', target: '_blank' },
+        // { href: 'Image/Tableur certification.pdf', label: 'E5', target: '_blank' },
+        { href: 'Image/Oral EF3.pdf', label: 'Oral EF3', target: '_blank' },
         { href: 'Image/CV.pdf', label: 'CV <i class="fas fa-download" style="font-size:0.85em; margin-left:4px;"></i>', target: '_blank' }
     ];
 
